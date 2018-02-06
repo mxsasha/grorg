@@ -7,9 +7,65 @@
     <div class="main-column">
         <h2>Welcome to Grorg.</h2>
         <p>
-            This is the semi-experimental system to help manage grant applications.
-            Please report problems to andrew@aeracode.org.
+            This is the semi-experimental system to help manage grant applications, originally developed by
+            Andrew Godwin. This is a customised version with extra options added for DjangoCon Europe.
         </p>
+        <h2>DjangoCon Europe 2018 review process</h2>
+        <p>
+            To become a reviewer, ask Sasha for an account. Once you are logged in, under "Applicants" you can see
+            all applicants. Click "score" to read and score an application, and then "save & next" to see the next one.
+        </p>
+        <p>
+            You can score an application from 1 (really bad) to 5 (really good), and optionally add a comment about
+            something that caught your eye in a good or bad way. Your comments should be pretty brief - if we need
+            to look at an application in more detail, we'll ask you for more explanation later.
+            Scores can have decimals (e.g. 4.5). Please ensure that you score all applications eventually, but you
+            don't have to do it in a single sitting.
+        </p>
+        <p>
+            You'll also find answers about underrepresented groups, visa requirements and whether they applied for
+            the CFP. <strong>Do not take these particular answers into account in your score.</strong> Some of this information still
+            needs to be updated for the CFP results, and we will later have a separate mechanism for prioritising
+            those answers correctly.
+        </p>        <p>
+            The applicant's name and email are hidden until you have assigned a first score, to reduce bias.
+            You can see them after you've assigned a score. You can still change your score, but a note will be added
+            with your original score.
+        </p>
+        <p>
+            Our goal is to maximise the impact our grant program has, within the limited funds we have.
+            The score you assign should be based on the overall impact that granting this person will have on them 
+            and on their wider community and country, compared to others, and taking into account the financial impact.
+            Some basic guidelines:
+        </p>
+        <p>
+            * To what extent will letting this person attend have a further impact on our community?
+            For example, someone who essentially wrote “I will help my company make more money” should probably be scored
+            lower than someone who is active in their local community.
+        </p>
+        <p>
+            * Social impact can be a part too: we should score “I use Django to help this bank I work for become
+            richer” lower than “I work with Django as part of a project to help addicted homeless
+            people towards recovery”.
+        </p>
+        <p>
+            * Where is this person from? If they would take a large budget, but live in an area that has many other
+            conferences closer by, that may be a better choice. So all other things being equal, we would rather
+            spend € 1000 on an attendee from Kenia than from Portland, Oregon, US.
+        </p>
+        <p>
+            * How reasonable is the cost?
+            We're unlikely to spend € 10.000 on a single applicant even if they have an amazing story.
+            On the other hand, if someone only wants a free ticket and no money because they live nearby,
+            the bar isn't so high. Cost is not the prime consideration though, because otherwise we'd only ever
+            select people that live near, and some people that we specifically want to include simply have higher
+            travel costs than others.
+        </p>
+        <p>
+            * Are they making a basic effort? For example, if someone won’t even have an estimate of the price of
+            their flight without further explanation, I’m assuming they couldn’t be bothered to search.
+        </p>
+
         {% if user.is_authenticated %}
             <h3>Programs</h3>
             {% for program in accessible_programs %}
