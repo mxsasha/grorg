@@ -5,7 +5,7 @@ from .models import Question, Score, Resource, Allocation
 class QuestionForm(forms.ModelForm):
 
     class Meta:
-        fields = ["question", "type", "required", "sort_priority"]
+        fields = ["question", "type", "required", "hidden_until_scored", "sort_priority"]
         model = Question
 
     def clean_type(self):

@@ -102,6 +102,7 @@ class Question(models.Model):
     type = models.CharField(max_length=50, choices=TYPE_CHOICES)
     question = models.TextField()
     required = models.BooleanField(default=False)
+    hidden_until_scored = models.BooleanField(default=False)
     sort_priority = models.IntegerField(null=True, blank=True, validators=[MinValueValidator(1)])
     order = models.IntegerField(default=0)
 

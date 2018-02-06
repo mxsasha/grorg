@@ -27,14 +27,20 @@
 
         {% for question in questions %}
             <h4>{{ question.question }}</h4>
-            {% if question.answer %}
-                <p>
-                    {{ question.answer.answer|linebreaksbr }}
-                </p>
+            {% if all_scores or program.show_names_before_scoring or not question.hidden_until_scored %}
+                {% if question.answer %}
+                    <p>
+                        {{ question.answer.answer|linebreaksbr }}
+                    </p>
+                {% else %}
+                    <p class="empty">
+                        Not answered.
+                    </p>
+                {% endif %}
             {% else %}
-                <p class="empty">
-                    Not answered.
-                </p>
+                    <p class="empty">
+                        (hidden until scored)
+                    </p>
             {% endif %}
         {% endfor %}
 
