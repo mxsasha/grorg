@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}{{ applicant.name }} - {{ program }}{% endblock %}
+{% block title %}{% if all_scores or program.show_names_before_scoring %}{{ applicant.name }} - {% endif %} {{ program }}{% endblock %}
+
 
 {% block content %}
 <div class="section">
