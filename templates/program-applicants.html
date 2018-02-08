@@ -9,7 +9,6 @@
     <table class="nice">
         <tr>
             <th>Name</th>
-            <th><a href="?sort=applied">Applied {% if sort == "applied" %}<i class="fa fa-chevron-circle-down"></i>{% endif %}</a></th>
             {% for field in extra_fields %}
                 <th>{{ field }}</th>
             {% endfor %}
@@ -24,7 +23,6 @@
             {% else %}
                 <td class="empty">(hidden)</td>
             {% endif %}
-            <td class="small">{{ applicant.applied|date:"j M Y P" }}</td>
             {% for answer in applicant.extra_answers %}
                 {% if answer.answer == 'Yes' %}
                     <td><i class="fa fa-check green"></i></td>
